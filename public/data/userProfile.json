@@ -1,0 +1,14 @@
+{
+  "name": "Alexander Hansen",
+  "availability": true,
+
+  "certifications": [
+    {
+      "id": "cert1",
+      "title": "AWS Certified Developer",
+      "issuer": "Amazon Web Services",
+      "issuedDate": "2024-07-12",
+      "credentialUrl": "https://example.com/verify/aws-cert"
+    }
+  ]
+}

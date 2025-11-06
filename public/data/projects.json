@@ -1,0 +1,18 @@
+[
+  {
+    "id": "project-1",
+    "title": "AI Chatbot Demo",
+    "description": "Interactive chatbot built with GPT and Spring Boot backend.",
+    "image": "/images/chatbot.png",
+    "tags": ["AI", "Spring Boot", "React"],
+    "featured": true
+  },
+  {
+    "id": "project-2",
+    "title": "Library Management System",
+    "description": "Web-based library system with PHP and MySQL.",
+    "image": "/images/library.png",
+    "tags": ["PHP", "MySQL", "Vue"],
+    "featured": true
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "id": 1,
+  "title": "AWS badge",
+  "issuer": "Amazon Web Services",
+  "issuedDate": "2025-01-15",
+  "credentialId": "AWS-",
+  "credentialUrl": "www.example.com/aws-badge",
+  "tags": ["cloud", "aws", "devops"]
+}
