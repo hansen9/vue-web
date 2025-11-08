@@ -3,10 +3,15 @@
 import { onMounted, computed } from 'vue'
 import { useFeaturedProjects } from '@/composables/UseFeaturedProjects'
 import { useUserProfile } from '@/composables/UseUserProfile'
+import { useI18n } from 'vue-i18n'
+
+// composables
 import ProjectCard from '@/components/ProjectCard.vue'
 import AdaptiveCta from '@/components/AdaptiveCta.vue'
+
+// components
 import CertificationsSection from '@/components/CertificationsSection.vue'
-import { useI18n } from 'vue-i18n'
+import SandBox from '@/components/SandBox.vue'
 
 const { t } = useI18n()
 const { userProfile, isAvailable } = useUserProfile()
@@ -29,6 +34,9 @@ onMounted(() => {
         </p>
         <router-link to="/contact" class="cta-button">Get Started</router-link>
       </div>
+    </section>
+    <section>
+      <SandBox />
     </section>
 
     <section>
