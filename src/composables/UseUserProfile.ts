@@ -3,6 +3,7 @@ import { ref, onMounted } from 'vue'
 interface UserProfile {
   name: string
   availability: boolean
+  careerStart: string
 }
 
 const userProfile = ref<UserProfile | null>(null)

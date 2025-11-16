@@ -1,14 +1,21 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 
-const count = ref(0)
+const firstName = ref('Alex')
+const lastName = ref('Hansen')
 
-function increment() {
-  count.value++
-}
+const fullName = computed({
+  get() {
+    return firstName.value + ' ' + lastName.value
+  },
+  set(newValue) {
+    const parts = newValue.split(' ')
+    firstName.value = parts[0] || ''
+    lastName.value = parts[1] || ''
+  },
+})
 </script>
 
 <template>
-  <div>{{ count }}</div>
-  <button @click="increment">{{ count }}</button>
+  <div>{{ fullName }}</div>
 </template>

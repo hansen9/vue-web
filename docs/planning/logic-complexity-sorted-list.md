@@ -29,7 +29,7 @@ This document sorts all logic features in the portfolio by **complexity**, consi
 | Tag filtering                                | 🏠 Home    | UI filtering + dynamic render   | [x] |
 | Recent activity                              | 🏠 Home    | Time-based list refresh         | [ ] |
 | Certification data                           | 👤 About   | Schema-driven rendering         | [x] |
-| Auto-updated bio stats                       | 👤 About   | Uses data or API updates        | [ ] |
+| Auto-updated bio stats                       | 👤 About   | Uses data or API updates        | [x] |
 | Audience parameter                           | 👤 About   | Affects what’s shown to who     | [ ] |
 | Localized language display                   | 🏠 Home    | i18n logic and content mapping  | [x] |
 

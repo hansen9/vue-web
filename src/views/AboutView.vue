@@ -1,12 +1,38 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import SkillsList from '../components/SkillsList.vue'
+import { useUserProfile } from '@/composables/UseUserProfile'
+const { userProfile } = useUserProfile()
+
+const yearsOfExperience = computed(() => {
+  if (!userProfile.value?.careerStart) return { years: 0, months: 0 }
+  const dateStr = userProfile.value.careerStart.toString()
+  const year = new Date().getFullYear()
+  const month = new Date().getMonth()
+  const startYear = new Date(dateStr).getFullYear()
+  const startMonth = new Date(dateStr).getMonth()
+
+  const totalMonths = (year - startYear) * 12 + (month - startMonth)
+  if (totalMonths <= 0) return { years: 0, months: 0 }
+
+  const years = Math.floor(totalMonths / 12)
+  const months = totalMonths % 12
+
+  return { years, months }
+})
 </script>
 
 <template>
   <div class="about">
     <h1>About Us</h1>
     <section class="about-content">
-      <div class="about-section">
+      <div v-if="userProfile">
+        <h2>Years of experience</h2>
+        <p class="text-lg font-semibold">
+          {{ yearsOfExperience.months }} Months {{ yearsOfExperience.years }} Years
+        </p>
+      </div>
+      <!-- <div class="about-section">
         <h2>Who We Are</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt
@@ -31,7 +57,7 @@ import SkillsList from '../components/SkillsList.vue'
           <li>Innovation and creativity</li>
           <li>Integrity and transparency</li>
         </ul>
-      </div>
+      </div> -->
 
       <div class="about-section">
         <SkillsList />

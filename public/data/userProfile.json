@@ -1,7 +1,8 @@
 {
   "name": "Alexander Hansen",
   "availability": true,
-
+  "careerStart": "2025-06-14",
+  "skills": ["Vue", "TypeScript", "DevOps"],
   "certifications": [
     {
       "id": "cert1",
