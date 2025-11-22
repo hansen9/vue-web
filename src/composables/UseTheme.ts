@@ -6,6 +6,8 @@ const theme = ref<'light' | 'dark'>('light')
 export function useTheme() {
   //load dari localStorage atw sistem
   const getInitialTheme = (): 'light' | 'dark' => {
+    if (typeof window === 'undefined') return 'light'
+
     const saved = localStorage.getItem(THEME_KEY)
     if (saved === 'light' || saved === 'dark') return saved
 
@@ -14,6 +16,7 @@ export function useTheme() {
   }
 
   const applyTheme = (mode: 'light' | 'dark') => {
+    if (typeof window === 'undefined') return
     document.documentElement.setAttribute('data-theme', mode)
     localStorage.setItem(THEME_KEY, mode)
   }
