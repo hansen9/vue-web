@@ -10,6 +10,9 @@ export default defineConfig(({ command }) => ({
     vue(),
     command === 'serve' && vueDevTools(), // <-- THE FIX,
   ],
+  ssr: {
+    noExternal: ['vue-recaptcha-v3'],
+  },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
