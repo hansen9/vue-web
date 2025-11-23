@@ -17,6 +17,9 @@ if (typeof window === 'undefined') {
 }
 // https://vite.dev/config/
 export default defineConfig(({ command }) => ({
+  define: {
+    __VUE_PROD_DEVTOOLS__: false,
+  },
   plugins: [
     vue(),
     command === 'serve' && vueDevTools(), // <-- THE FIX,
