@@ -25,10 +25,10 @@ export function useTheme() {
   onMounted(() => {
     theme.value = getInitialTheme()
     applyTheme(theme.value)
-  })
 
-  // auto-apply tiap ada perubahan theme
-  watchEffect(() => applyTheme(theme.value))
+    // auto-apply tiap ada perubahan theme
+    watchEffect(() => applyTheme(theme.value))
+  })
 
   return { theme, applyTheme }
 }
